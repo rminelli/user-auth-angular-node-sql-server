@@ -1,10 +1,16 @@
 USE master
 GO
+IF DB_ID ('MyLabDatabase') IS NOT NULL
+DROP DATABASE MyLabDatabase;
+GO
 CREATE DATABASE MyLabDatabase;
 GO
 
 
 USE MyLabDatabase
+GO
+IF DB_ID ('Users') IS NOT NULL
+DROP DATABASE MyLabDatabase;
 GO
 CREATE TABLE Users
 (
@@ -13,4 +19,3 @@ CREATE TABLE Users
 	UserPassword nvarchar(50) NOT NULL
 	CONSTRAINT UserID PRIMARY KEY CLUSTERED 
 )
-	
