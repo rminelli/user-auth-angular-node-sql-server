@@ -1,0 +1,22 @@
+{
+  "name": "users-authentication-node-sql-server",
+  "version": "1.0.0",
+  "description": "users-authentication-node-sql-server",
+  "main": "sql_server_authentication.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rminelli/users-authentication-node-sql-server.git"
+  },
+  "author": "Roberto Minelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rminelli/users-authentication-node-sql-server/issues"
+  },
+  "homepage": "https://github.com/rminelli/users-authentication-node-sql-server#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
+}
