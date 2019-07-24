@@ -18,3 +18,10 @@ CREATE TABLE Users
     UserPassword nvarchar(50) NOT NULL
         CONSTRAINT UserID PRIMARY KEY CLUSTERED
 )
+
+--- Entering an example user
+
+	INSERT INTO Users
+		(UserName,UserPassword)
+	VALUES 
+		('roberto.minelli','eLBg34STHqa3F2cEB4CeTQ==')
