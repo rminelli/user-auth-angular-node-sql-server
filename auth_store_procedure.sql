@@ -3,7 +3,7 @@ GO
 -- =============================================
 -- Author:		<Roberto Minelli>
 -- Create date: <11/06/2019>
--- Description:	<Autenticação de usuário do GED>
+-- Description:	<Procedure that returns the user's password>
 -- =============================================
 
 CREATE PROCEDURE [dbo].[UserAuthentication]
