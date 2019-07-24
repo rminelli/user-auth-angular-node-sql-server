@@ -11,7 +11,11 @@ CREATE PROCEDURE [dbo].[UserAuthentication]
 AS
 SET NOCOUNT ON
 BEGIN
-    DECLARE @_userName VARCHAR(100)
+DECLARE @_userName VARCHAR(50)
+SET @_userName = (SELECT UserName FROM Users WHERE UserName = @userName)
+IF @_userName IS NULL OR @_userName = ''
+ 	  SELECT 1 AS 'RETURN' -- User does not exist
+ELSE 
     SELECT
         UserPassword AS 'RETURN'
     FROM
@@ -20,5 +24,6 @@ BEGIN
         UserName = @userName
 END
 GO
+
 
 
