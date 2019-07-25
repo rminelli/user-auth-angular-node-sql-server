@@ -13,7 +13,7 @@ exports.getLoginData = function (req, res) {
         database: 'MyLabDatabase',
         options: {
             encrypt: false,
-            instanceName: 'WKVEDW'
+            instanceName: 'MyIntance'
         }
     }
 
@@ -103,12 +103,12 @@ exports.getLoginData = function (req, res) {
         });
 
     }).catch(function (errsql) {
-        console.log("ERRO SQL PROTHEUS", errsql);
+        console.log("ERRO SQL ", errsql);
         sql.close();
         res.json(
             {
                 "status": false,
-                "msg": "ERRO SQL PROTHEUS"
+                "msg": "ERRO SQL "
             }
         )
     })
