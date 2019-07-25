@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100" ng-app="auth_module" ng-cloak>
+
 <head>
   <meta name="loginForm" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
     }
+
     form {
       border: 3px solid rgb(22, 98, 141);
       text-align: center;
     }
+
     input[type=text],
     input[type=password] {
       width: 50%;
@@ -23,12 +26,19 @@
     button {
       padding: 14px 20px;
       margin: 8px 0;
-      border: none;
       cursor: pointer;
       width: 30%;
     }
+
     .container {
       padding: 16px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      padding-left: 60px;
+      text-align: center;
+      color: rgb(22, 98, 141);
     }
   </style>
   <meta charset="UTF-8">
@@ -36,23 +46,27 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>User Authentication</title>
 </head>
+
 <body ng-controller="loginController">
-  <div ng-if="loading">
-    <p>
-      Please wait!
-    </p>
-  </div>
   <form name="loginForm" ng-if="!loading">
-      <pre>{{userData}}</pre>
-      <label for="userName"><b>Username</b></label>
-      <input ng-model="userData.userName" type="text" id="userName" name="userName" placeholder="User Name" required/> <br>
-      <label for="userPassword"><b>Password</b></label>
-      <input ng-model="userData.userPassword" type="password" id="userPassword" name="userPassword" placeholder="User Password" required/> <br>
-      <button ng-click="doLogin(userData)" ng-disabled="loginForm.$invalid">Login</button>
+    <div ng-if="!loading && authResponse">
+      <h2>
+        {{authResponse.msg}}
+      </h2>
+    </div>
+    <pre>{{userData}}</pre>
+    <label for="userName"><b>Username</b></label>
+    <input ng-model="userData.userName" type="text" id="userName" name="userName" placeholder="User Name" required />
+    <br>
+    <label for="userPassword"><b>Password</b></label>
+    <input ng-model="userData.userPassword" type="password" id="userPassword" name="userPassword"
+      placeholder="User Password" required /> <br>
+    <button ng-click="doLogin(userData)" ng-disabled="loginForm.$invalid">Login</button>
   </form>
 </body>
 <!-- SCRIPTS -->
-<script src="./node_modules/angular/angular.min.js"></script> 
-<script src="./auth_module.js"></script> 
+<script src="./node_modules/angular/angular.min.js"></script>
+<script src="./auth_module.js"></script>
 <script src="./login-controller.js"></script>
+
 </html>
