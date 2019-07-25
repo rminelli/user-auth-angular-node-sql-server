@@ -24,3 +24,4 @@ let server = app.listen(5510, function () {
 
 })
 
+// <node index.js> to run app
