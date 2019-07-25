@@ -25,6 +25,7 @@ This material may be copied, distributed, displayed and executed, as well as use
  and due credit.
 
  I am available for any questions.
+ 
  Best regards, 
 
  Roberto Minelli
