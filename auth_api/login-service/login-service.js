@@ -24,7 +24,7 @@ exports.getLoginData = function (req, res) {
         let query = "EXEC UserAuthentication '" + _userName + "'";
         console.log("query  --->", query);
         return pool.request().query(query).then(function (result) {
-            console.log("*** DETALHES RETORNADOS COM SUCESSO *** ");
+            console.log("*** DETALHES RETORNADOS COM SUCESSO ** ");
 
             let _returnSql = result.recordset[0].RETURN;
 
