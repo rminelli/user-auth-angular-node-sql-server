@@ -24,7 +24,7 @@ exports.getLoginData = function (req, res) {
         let query = "EXEC UserAuthentication '" + _userName + "'";
         console.log("query  --->", query);
         return pool.request().query(query).then(function (result) {
-            console.log("*** DETALHES RETORNADOS COM SUCESSO ** ");
+            console.log("*** Data successfully returned *** ");
 
             let _returnSql = result.recordset[0].RETURN;
 
@@ -33,37 +33,15 @@ exports.getLoginData = function (req, res) {
                 return res.json(
                     {
                         "status": false,
-                        "msg": "Usuário inválido",
+                        "msg": "Invalid user",
                         "cod": 1
                     }
                 )
-            }
-            else if (_returnSql === 2) {
-                sql.close();
-                return res.json(
-                    {
-                        "status": false,
-                        "msg": "Senha não cadastrada",
-                        "cod": 2
-                    }
-                )
-            }
-            else if (_returnSql === 22) {
-                sql.close();
-                return res.json(
-                    {
-                        "status": true,
-                        "msg": "Senha cadastrada com sucesso",
-                        "cod": 22
-                    }
-                )
-            }
-            else {
-                // Autenticação usuário - Descripitografando senha do banco
-                let _userpasswordDecrypted = CryptoJS.AES.decrypt(_returnSql.toString(), secretKey);
-                let _userpasswordString = _userpasswordDecrypted.toString(CryptoJS.enc.Utf8);
-                if (_userpasswordString == _userpasswordformString) {
-                    console.log("Autenticado");
+            } else {
+                // User Authentication
+                let _userPasswordReturn = _returnSql.toString()
+                if (_userPassword == _userPasswordReturn) {
+                    console.log("Authenticated");
                     sql.close();
                     delete result.recordset[0].RETURN;
                     res.json(
