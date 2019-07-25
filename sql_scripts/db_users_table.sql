@@ -24,4 +24,4 @@ CREATE TABLE Users
 	INSERT INTO Users
 		(UserName,UserPassword)
 	VALUES 
-		('roberto.minelli','eLBg34STHqa3F2cEB4CeTQ==')
+		('roberto.minelli','roberto.minelli')
