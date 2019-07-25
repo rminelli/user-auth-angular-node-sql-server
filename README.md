@@ -13,7 +13,7 @@ __Properties__
 * JavaScript frameworks
 
 
-Install SQL Server from the Installation Wizard (Setup):
+Install SQL Server Express Edition from the Installation Wizard (Setup):
 
 https://docs.microsoft.com/pt-br/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup?view=sql-server-2017
 
@@ -25,7 +25,7 @@ This material may be copied, distributed, displayed and executed, as well as use
  and due credit.
 
  I am available for any questions.
- 
+
  Best regards, 
 
  Roberto Minelli
