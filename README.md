@@ -9,8 +9,8 @@ The settings were made to run from VSCode using the Live Server extension.
 
 __Properties__
 * Using model-view-controller (MVC) architecture
-* Sql Server store procedure
-* Average case performance	
+* SQL Server store procedure
+* JavaScript frameworks
 
 
 Install SQL Server from the Installation Wizard (Setup):
@@ -25,5 +25,5 @@ This material may be copied, distributed, displayed and executed, as well as use
  and due credit.
 
 
-### Best regards, 
-### Roberto Minelli
+## Best regards, 
+## Roberto Minelli
