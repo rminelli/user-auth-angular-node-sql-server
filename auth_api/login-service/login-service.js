@@ -8,8 +8,8 @@ exports.getLoginData = function (req, res) {
     const sql = require('mssql');
     let sqlConfig = {
         user: 'sa',
-        password: '@Wk1VE!?GV%1=Mg#8',
-        server: "189.76.208.164",
+        password: 'password',
+        server: "localhost",
         database: 'MyLabDatabase',
         options: {
             encrypt: false,
