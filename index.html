@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100" ng-app="auth_module" ng-cloak>
 <head>
   <meta name="loginForm" content="width=device-width, initial-scale=1">
   <style>
@@ -19,17 +19,13 @@
       border: 1px solid #ccc;
       box-sizing: border-box;
     }
+
     button {
-      background-color: rgb(22, 98, 141);
-      color: white;
       padding: 14px 20px;
       margin: 8px 0;
       border: none;
       cursor: pointer;
       width: 30%;
-    }
-    button:hover {
-      opacity: 0.8;
     }
     .container {
       padding: 16px;
@@ -40,15 +36,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>User Authentication</title>
 </head>
-<body>
-  <form>
-    <div class="container">
+
+<body ng-controller="loginController">
+  <div ng-if="loading">
+    <p>
+      Please wait!
+    </p>
+  </div>
+  <form name="loginForm" ng-if="!loading">
+      <pre>{{userData}}</pre>
       <label for="userName"><b>Username</b></label>
-      <input type="text" id="userName" name="userName" placeholder="User Name" /> <br>
+      <input ng-model="userData.userName" type="text" id="userName" name="userName" placeholder="User Name" required/> <br>
       <label for="userPassword"><b>Password</b></label>
-      <input type="password" id="userPassword" name="userPassword" placeholder="User Password" /> <br>
-      <button type="submit">Login</button>
-    </div>
+      <input ng-model="userData.userPassword" type="password" id="userPassword" name="userPassword" placeholder="User Password" required/> <br>
+      <button ng-click="doLogin(userData)" ng-disabled="loginForm.$invalid">Login</button>
   </form>
 </body>
+<!-- SCRIPTS -->
+<script src="./node_modules/angular/angular.min.js"></script> 
+<script src="./auth_module.js"></script> 
+<script src="./login-controller.js"></script>
+<!-- <script src="./node_modules/crypto-js/aes.js"></script>
+<script src="./aesmodule.js"></script> -->
 </html>
