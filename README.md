@@ -1,6 +1,6 @@
 # user-auth-angular-node-sql-server
 
-Authenticate and authorize your users.
+Authenticate and authorize users.
 
 User authentication using Angular.JS, Node.Js, and Microsoft SQL Server.
 
