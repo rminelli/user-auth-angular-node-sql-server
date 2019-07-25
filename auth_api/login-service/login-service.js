@@ -47,21 +47,19 @@ exports.getLoginData = function (req, res) {
                     res.json(
                         {
                             "status": true,
-                            "msg": "Usuário Válido",
-                            "userData": result.recordset[0],
-                            "cod": 3
+                            "msg": "Valid User",
+                            "userData": result.recordset[0]
                         }
                     )
 
                 }
                 else {
-                    console.log("Não autenticado");
+                    console.log("Não Unauthenticated");
                     sql.close();
                     res.json(
                         {
                             "status": false,
-                            "msg": "Senha incorreta",
-                            "cod": 4
+                            "msg": "Incorrect Password"
                         }
                     )
 
@@ -70,32 +68,25 @@ exports.getLoginData = function (req, res) {
 
 
         }).catch(function (err) {
-            console.log("ERROR SQL", err);
+            console.log("SQL Error", err);
             sql.close();
             res.json(
                 {
                     "status": false,
-                    "msg": "ERROR SQL"
+                    "msg": "SQL Error"
                 }
             )
         });
 
     }).catch(function (errsql) {
-        console.log("ERRO SQL ", errsql);
+        console.log("SQL Error", errsql);
         sql.close();
         res.json(
             {
                 "status": false,
-                "msg": "ERRO SQL "
+                "msg": "SQL Error"
             }
         )
     })
-
-
-    
-
-
-
-   
 
 }
