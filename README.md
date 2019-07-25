@@ -32,4 +32,4 @@ https://docs.microsoft.com/pt-br/sql/database-engine/install-windows/install-sql
 
  Best regards, 
 
- Roberto Minelli
+ Roberto de Figueiredo Minelli
