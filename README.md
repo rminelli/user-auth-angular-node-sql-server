@@ -8,5 +8,3 @@ The settings were made to run from VSCode using the Live Server extension.
 
 Best regards, 
 Roberto Minelli
-
-https://www.linkedin.com/in/robertominelli/
