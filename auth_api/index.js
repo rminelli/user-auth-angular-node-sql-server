@@ -20,7 +20,7 @@ app.post('/do-login',login_service.getLoginData)
 let server = app.listen(5510, function () {
     let host = server.address().address
     let port = server.address().port
-    console.log(`Running at ${host}:${port}`)
+    console.log(`App listening on ${host}:${port}`)
 
 })
 
