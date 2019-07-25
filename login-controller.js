@@ -6,8 +6,8 @@ _authModule.controller('loginController', function ($scope, $http) {
         let _userPassword = userData.userPassword
         console.log(`User name: ${_userName} - User password: ${_userPassword}`)
 
-        $http.post('http://localhost:5500', userData).then(function (response) {
-            console.log(response)
+        $http.post('http://127.0.0.1:5510/do-login', userData).then(function (response) { // Promisse
+            console.log(response.data)
         }).catch(function (error) {
             console.log(error)
         })
