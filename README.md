@@ -24,7 +24,7 @@ This material may be copied, distributed, displayed and executed, as well as use
  under Creative Commons Attribution license (http://creativecommons.org/licenses/by/2.5/en/), citing the source
  and due credit.
 
-
+ I am available for any questions.
  Best regards, 
- 
+
  Roberto Minelli
