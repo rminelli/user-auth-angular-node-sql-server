@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="loginForm" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    form {
+      border: 3px solid #f1f1f1;
+    }
+    input[type=text],
+    input[type=password] {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 30%;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+    .container {
+      padding: 16px;
+    }
+  </style>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="loginForm" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>User Authentication</title>
 </head>
 <body>
-  
+  <form>
+    <div class="container">
+      <label for="userName"><b>Username</b></label>
+      <input type="text" id="userName" name="userName" placeholder="User Name" /> <br>
+      <label for="userPassword"><b>Username</b></label>
+      <input type="password" id="userPassword" name="userPassword" placeholder="User Password" /> <br>
+      <button type="submit">Login</button>
+    </div>
+  </form>
 </body>
 </html>
