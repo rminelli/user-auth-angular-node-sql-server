@@ -25,5 +25,6 @@ This material may be copied, distributed, displayed and executed, as well as use
  and due credit.
 
 
-## Best regards, 
-## Roberto Minelli
+ Best regards, 
+ 
+ Roberto Minelli
