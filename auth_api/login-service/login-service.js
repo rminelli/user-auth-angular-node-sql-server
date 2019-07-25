@@ -1,19 +1,17 @@
 exports.getLoginData = function (req, res) {
 
     let _userName = req.body.userName
-    let _userPassword = req.body.userName
+    let _userPassword = req.body.userPassword
 
-    console.log(_userName, _userPassword)
-
-    const sql = require('mssql');
+    const sql = require('mssql'); // Update data for connection to your database instance
     let sqlConfig = {
         user: 'sa',
         password: 'password',
-        server: "localhost",
+        server: 'localhost',
         database: 'MyLabDatabase',
         options: {
             encrypt: false,
-            instanceName: 'MyIntance'
+            instanceName: 'myinstance'
         }
     }
 
@@ -22,39 +20,39 @@ exports.getLoginData = function (req, res) {
 
 
         let query = "EXEC UserAuthentication '" + _userName + "'";
-        console.log("query  --->", query);
+        console.log(`Query  ---> ${query}`);
         return pool.request().query(query).then(function (result) {
-            console.log("*** Data successfully returned *** ");
+        console.log("*** Data successfully returned *** ");
 
             let _returnSql = result.recordset[0].RETURN;
 
             if (_returnSql === 1) {
+                console.log("User does not exist");
                 sql.close();
                 return res.json(
                     {
                         "status": false,
-                        "msg": "Invalid user",
+                        "msg": "User does not exist",
                         "cod": 1
                     }
                 )
             } else {
-                // User Authentication
-                let _userPasswordReturn = _returnSql.toString()
-                if (_userPassword == _userPasswordReturn) {
+                // Verifying Password
+                console.log(`Passwords ->  browser: ${_userPassword} and SQL: ${_returnSql}`)
+
+                if (_userPassword == _returnSql) {
                     console.log("Authenticated");
                     sql.close();
                     delete result.recordset[0].RETURN;
                     res.json(
                         {
                             "status": true,
-                            "msg": "Valid User",
-                            "userData": result.recordset[0]
+                            "msg": "Valid User"                            
                         }
                     )
-
                 }
                 else {
-                    console.log("Não Unauthenticated");
+                    console.log("Unauthenticated");
                     sql.close();
                     res.json(
                         {
@@ -65,8 +63,6 @@ exports.getLoginData = function (req, res) {
 
                 }
             }
-
-
         }).catch(function (err) {
             console.log("SQL Error", err);
             sql.close();
@@ -77,7 +73,6 @@ exports.getLoginData = function (req, res) {
                 }
             )
         });
-
     }).catch(function (errsql) {
         console.log("SQL Error", errsql);
         sql.close();
@@ -88,5 +83,4 @@ exports.getLoginData = function (req, res) {
             }
         )
     })
-
 }
