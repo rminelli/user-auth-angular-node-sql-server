@@ -19,7 +19,7 @@ CREATE TABLE Users
         CONSTRAINT UserID PRIMARY KEY CLUSTERED
 )
 
---- Entering an example user
+--- Entering an example user ---
 
 	INSERT INTO Users
 		(UserName,UserPassword)
