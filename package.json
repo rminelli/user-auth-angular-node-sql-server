@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/rminelli/users-authentication-node-sql-server.git"
   },
-  "author": "Roberto Minelli",
-  "license": "ISC",
+  "author": "Roberto de Figueiredo Minelli",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rminelli/users-authentication-node-sql-server/issues"
   },
