@@ -10,6 +10,8 @@ __Properties__
 * SQL Server store procedure
 * JavaScript frameworks
 
+![](preview.gif)
+
 __References__
 
 * AngularJS documentation
