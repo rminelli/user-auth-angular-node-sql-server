@@ -1,7 +1,7 @@
 # User authentication using Node.js, Angular.js and SQL Server
 
 ##
-This project is to demonstrate the integration of Node.JS and AngularJS as the SQL Server 2016 for authentication of users.
+This project demonstrates user authentication through a REST API developed in JavaScript running on Node.js and consuming data from Microsoft SQL Server 2016 and the frontend, also in JavaScript, using the AngularJS framework.
 
 The settings were made to run from VSCode using the Live Server extension.
 
