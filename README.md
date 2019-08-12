@@ -5,7 +5,7 @@ This project demonstrate the integration of JavaScript (Node.Js) and Microsoft S
 
 __Backend__
 
-* Developed in JavaScript, running on Node.js and consuming data from Microsoft SQL Server 2106.
+* Developed in JavaScript, running on Node.js and consuming data from Microsoft SQL Server 2016.
 
 __Frontend__
 
@@ -15,6 +15,8 @@ __Properties__
 * Using model-view-controller (MVC) architecture
 * SQL Server store procedure
 * JavaScript frameworks
+* REST Web Services
+  
 
 ![](preview.gif)
 
