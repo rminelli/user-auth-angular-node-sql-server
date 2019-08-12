@@ -22,10 +22,6 @@ __Properties__
 
 __References__
 
-* AngularJS documentation
-
-https://docs.angularjs.org/api
-
 * Node.js Api documentation 
 
 https://nodejs.org/en/docs/
@@ -33,6 +29,10 @@ https://nodejs.org/en/docs/
 * Install SQL Server Express Edition from the Installation Wizard (Setup):
 
 https://docs.microsoft.com/pt-br/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup?view=sql-server-2017
+
+* AngularJS documentation
+
+https://docs.angularjs.org/api
 
 
 ##
