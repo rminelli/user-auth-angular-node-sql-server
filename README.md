@@ -5,6 +5,7 @@ This project demonstrate the integration of JavaScript (Node.Js) and Microsoft S
 
 __Backend__
 Developed in JavaScript, running on Node.js and consuming data from Microsoft SQL Server 2106.
+
 __Frontend__
 Developed in JavaScript using the AngularJS framework.
 
