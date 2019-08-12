@@ -4,10 +4,12 @@
 This project demonstrate the integration of JavaScript (Node.Js) and Microsoft SQL Server 2016 for user authentication.
 
 __Backend__
-Developed in JavaScript, running on Node.js and consuming data from Microsoft SQL Server 2106.
+
+* Developed in JavaScript, running on Node.js and consuming data from Microsoft SQL Server 2106.
 
 __Frontend__
-Developed in JavaScript using the AngularJS framework.
+
+* Developed in JavaScript using the AngularJS framework.
 
 __Properties__
 * Using model-view-controller (MVC) architecture
