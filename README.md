@@ -1,7 +1,7 @@
 # User authentication using Node.js, Angular.js and SQL Server
 
 ##
-This project demonstrate the integration of JavaScript (Node.Js) and Microsoft SQL Server 2016 for user authentication.
+This project demonstrates the integration of JavaScript (Node.Js) and Microsoft SQL Server 2016 for user authentication.
 
 __Backend__
 
