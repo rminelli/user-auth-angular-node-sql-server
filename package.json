@@ -4,6 +4,7 @@
   "description": "users-authentication-node-sql-server",
   "main": "sql_server_authentication.js",
   "scripts": {
+    "start": "node ./auth_api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

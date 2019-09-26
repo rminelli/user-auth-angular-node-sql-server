@@ -33,8 +33,7 @@ $ cd user-auth-angular-node-sql-server
 $ npm install
 
 # Run API service
-$ cd .\auth_api
-$ node index.js
+$ npm start
 ```
 
 __References__
