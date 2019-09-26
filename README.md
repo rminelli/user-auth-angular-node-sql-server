@@ -20,6 +20,23 @@ __Properties__
 
 ![](preview.gif)
 
+## How to Use
+
+```bash
+# Clone this repository
+$ git clone https://github.com/rminelli/user-auth-angular-node-sql-server
+
+# Go into the repository
+$ cd user-auth-angular-node-sql-server
+
+# Install dependencies
+$ npm install
+
+# Run API service
+$ cd user-auth-angular-node-sql-server\auth_api
+$ node index.js
+```
+
 __References__
 
 * Node.js documentation 
