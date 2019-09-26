@@ -8,8 +8,8 @@ GO
 
 USE MyLabDatabase
 GO
-IF DB_ID ('Users') IS NOT NULL
-DROP DATABASE MyLabDatabase;
+IF OBJECT_ID('dbo.Users') IS NOT NULL
+DROP TABLE Users;
 GO
 CREATE TABLE Users
 (
